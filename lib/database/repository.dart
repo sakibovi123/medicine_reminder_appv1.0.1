@@ -1,5 +1,3 @@
-
-
 import 'package:medicine/database/pills_database.dart';
 import 'package:sqflite/sqflite.dart';
 

@@ -229,7 +229,7 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
               Spacer(),
               Divider(),
               Container(
-                height: deviceHeight * 0.09,
+                height: 40,
                 width: double.infinity,
                 child: PlatformFlatButton(
                   handler: () async => savePill(),
@@ -239,7 +239,7 @@ class _AddNewMedicineState extends State<AddNewMedicine> {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
-                        fontSize: 17.0),
+                        fontSize: 15.0),
                   ),
                 ),
               )

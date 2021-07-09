@@ -3,6 +3,8 @@ import 'package:animated_widgets/animated_widgets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:medicine/screens/add_new_todo/home_screen.dart';
+import 'package:medicine/screens/add_new_todo/note_list.dart';
 import '../../notifications/notifications.dart';
 import '../../database/repository.dart';
 import '../../models/pill.dart';
@@ -106,16 +108,22 @@ class _HomeState extends State<Home> {
                           "Rafsun & Azim Medicine Store",
                           style: TextStyle(fontSize: 18, color: Colors.orange),
                         ),
-                        ShakeAnimatedWidget(
-                          enabled: true,
-                          duration: Duration(milliseconds: 2000),
-                          curve: Curves.linear,
-                          shakeAngle: Rotation.deg(z: 30),
-                          child: Icon(
-                            Icons.notifications_none,
-                            size: 42.0,
+                        // ShakeAnimatedWidget(
+                        //   enabled: true,
+                        //   duration: Duration(milliseconds: 2000),
+                        //   curve: Curves.linear,
+                        //   shakeAngle: Rotation.deg(z: 30),
+                        //   child: Icon(
+                        //     Icons.notifications_none,
+                        //     size: 42.0,
+                        //   ),
+                        // )
+                        FlatButton(onPressed: () => {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (_) => NoteList())
                           ),
-                        )
+                        }, child: Text("TODO"))
                       ],
                     ),
                   ),
